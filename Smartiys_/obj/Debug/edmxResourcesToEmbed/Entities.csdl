@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Beden">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tur" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Calisan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="soyadi" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cinsiyet" Type="Boolean" Nullable="false" />
+    <Property Name="askerlikdurumu" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mezuniyet" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tc" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="numara" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ayrilmanedeni" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="kangrubu" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Departman_ID" Type="Int32" />
+    <Property Name="Calisma_Sure_ID" Type="Int32" />
+    <Property Name="Gorev_ID" Type="Int32" />
+    <Property Name="Uretim_Safha_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CalismaSüreleri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslamasaati" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="bitissaati" Type="Time" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityType Name="CalismaTarihi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslangictarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="bitistarihi" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Departman">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="kisisayisi" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gorev">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Makina">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Seri_No" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="adi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Marka" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Cinsi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Durumu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ozellik" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Grubu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Operasyon">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="islemadi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="islemsüresi" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ParaBirimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParaDonusum">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="deger" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Renk">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Siparis">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="verilistarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="teslimtarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="adet" Type="Int32" Nullable="false" />
+    <Property Name="BedenID" Type="Int32" Nullable="false" />
+    <Property Name="ParabirimiID" Type="Int32" Nullable="false" />
+    <Property Name="DepartmanID" Type="Int32" Nullable="false" />
+    <Property Name="Teslim_Adresi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Teslim_Firma" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Terminal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tussayisi" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Uretim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="uretimtarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="adet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Uretim_Safhalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Safhalar" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SmartEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Beden" EntityType="Self.Beden" />
+    <EntitySet Name="Calisan" EntityType="Self.Calisan" />
+    <EntitySet Name="CalismaSüreleri" EntityType="Self.CalismaSüreleri" />
+    <EntitySet Name="CalismaTarihi" EntityType="Self.CalismaTarihi" />
+    <EntitySet Name="Departman" EntityType="Self.Departman" />
+    <EntitySet Name="Gorev" EntityType="Self.Gorev" />
+    <EntitySet Name="Makina" EntityType="Self.Makina" />
+    <EntitySet Name="Operasyon" EntityType="Self.Operasyon" />
+    <EntitySet Name="ParaBirimi" EntityType="Self.ParaBirimi" />
+    <EntitySet Name="ParaDonusum" EntityType="Self.ParaDonusum" />
+    <EntitySet Name="Renk" EntityType="Self.Renk" />
+    <EntitySet Name="Siparis" EntityType="Self.Siparis" />
+    <EntitySet Name="Terminal" EntityType="Self.Terminal" />
+    <EntitySet Name="Uretim" EntityType="Self.Uretim" />
+    <EntitySet Name="Uretim_Safhalar" EntityType="Self.Uretim_Safhalar" />
+    <EntitySet Name="Bant_Tanim" EntityType="SmartModel.Bant_Tanim" />
+    <EntitySet Name="Model" EntityType="SmartModel.Model" />
+    <EntitySet Name="Durum" EntityType="SmartModel.Durum" />
+    <EntitySet Name="Grup" EntityType="SmartModel.Grup" />
+  </EntityContainer>
+  <EntityType Name="Bant_Tanim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Bant_Adi" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Bant_Kodu" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Durum" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tanimi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="maxkapasite" Type="Int32" Nullable="false" />
+    <Property Name="Standart" Type="Double" />
+    <Property Name="Kodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Durum">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="D_Adi" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="D_Tanimi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Grup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="G_Adi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

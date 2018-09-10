@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BantTanim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BantAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BantKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Durum" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Beden">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Calisan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Askerlik" Type="Boolean" />
+    <Property Name="Mezuniyet" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TC" Type="Int64" />
+    <Property Name="Telefon" Type="Int64" />
+    <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AyrilmaNedeni" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KanGrubu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmanID" Type="Int32" />
+    <Property Name="CalismaSuresiID" Type="Int32" />
+    <Property Name="GorevID" Type="Int32" />
+    <Property Name="UretimSafhaID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CalismaSureleri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslangic" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Bitis" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CalismaTarihi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslangic" Type="DateTime" Precision="0" />
+    <Property Name="Bitis" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Departman">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KisiSayisi" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Durum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Gorev">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Grup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Makina">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SeriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Marka" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Cins" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Durum" Type="Boolean" />
+    <Property Name="Ozellik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Grup" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaxKapasite" Type="Int32" />
+    <Property Name="Standart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ParaBirimi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ParaDonusum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Deger" Type="Double" />
+  </EntityType>
+  <EntityType Name="Renk">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Siparis">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VerilisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="TeslimTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Adet" Type="Int32" />
+    <Property Name="BedenID" Type="Int32" />
+    <Property Name="ParaBirimiID" Type="Int32" />
+    <Property Name="DepartmanID" Type="Int32" />
+    <Property Name="TeslimAdresi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TeslimFirma" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Terminal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TusSayisi" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Uretim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UretimTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Adet" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UretimSafha">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Safhalar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="SmartDb" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BantTanim" EntityType="Self.BantTanim" />
+    <EntitySet Name="Beden" EntityType="Self.Beden" />
+    <EntitySet Name="Calisan" EntityType="Self.Calisan" />
+    <EntitySet Name="CalismaSureleri" EntityType="Self.CalismaSureleri" />
+    <EntitySet Name="CalismaTarihi" EntityType="Self.CalismaTarihi" />
+    <EntitySet Name="Departman" EntityType="Self.Departman" />
+    <EntitySet Name="Durum" EntityType="Self.Durum" />
+    <EntitySet Name="Gorev" EntityType="Self.Gorev" />
+    <EntitySet Name="Grup" EntityType="Self.Grup" />
+    <EntitySet Name="Makina" EntityType="Self.Makina" />
+    <EntitySet Name="Model" EntityType="Self.Model" />
+    <EntitySet Name="ParaBirimi" EntityType="Self.ParaBirimi" />
+    <EntitySet Name="ParaDonusum" EntityType="Self.ParaDonusum" />
+    <EntitySet Name="Renk" EntityType="Self.Renk" />
+    <EntitySet Name="Siparis" EntityType="Self.Siparis" />
+    <EntitySet Name="Terminal" EntityType="Self.Terminal" />
+    <EntitySet Name="Uretim" EntityType="Self.Uretim" />
+    <EntitySet Name="UretimSafha" EntityType="Self.UretimSafha" />
+  </EntityContainer>
+</Schema>

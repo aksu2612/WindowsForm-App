@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SmartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BantTanim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BantAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="BantKodu" Type="nvarchar" MaxLength="50" />
+          <Property Name="Durum" Type="bit" />
+        </EntityType>
+        <EntityType Name="Beden">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tur" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Calisan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Soyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cinsiyet" Type="nvarchar" MaxLength="5" />
+          <Property Name="Askerlik" Type="bit" />
+          <Property Name="Mezuniyet" Type="nvarchar" MaxLength="200" />
+          <Property Name="TC" Type="bigint" />
+          <Property Name="Telefon" Type="bigint" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="200" />
+          <Property Name="AyrilmaNedeni" Type="nvarchar" MaxLength="100" />
+          <Property Name="KanGrubu" Type="nvarchar" MaxLength="20" />
+          <Property Name="DepartmanID" Type="int" />
+          <Property Name="CalismaSuresiID" Type="int" />
+          <Property Name="GorevID" Type="int" />
+          <Property Name="UretimSafhaID" Type="int" />
+          <Property Name="SiparisID" Type="int" />
+          <Property Name="BantID" Type="int" />
+        </EntityType>
+        <EntityType Name="CalismaSureleri">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslangic" Type="nvarchar" MaxLength="5" />
+          <Property Name="Bitis" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="CalismaTarihi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslangic" Type="date" />
+          <Property Name="Bitis" Type="date" />
+        </EntityType>
+        <EntityType Name="Departman">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="KisiSayisi" Type="int" />
+        </EntityType>
+        <EntityType Name="Durum">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="20" />
+          <Property Name="Tanim" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Gorev">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Grup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Islemler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IslemAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="IslemSuresi" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="Makina">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kod" Type="nvarchar" MaxLength="50" />
+          <Property Name="SeriNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="20" />
+          <Property Name="Marka" Type="nvarchar" MaxLength="20" />
+          <Property Name="Cins" Type="nvarchar" MaxLength="10" />
+          <Property Name="Durum" Type="bit" />
+          <Property Name="Ozellik" Type="nvarchar" MaxLength="50" />
+          <Property Name="Grup" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tanim" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaxKapasite" Type="int" />
+          <Property Name="Standart" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kod" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ParaBirimi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ParaDonusum">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="20" />
+          <Property Name="Deger" Type="float" />
+        </EntityType>
+        <EntityType Name="Renk">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Siparis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="VerilisTarihi" Type="date" />
+          <Property Name="TeslimTarihi" Type="date" />
+          <Property Name="Adet" Type="int" />
+          <Property Name="BedenID" Type="int" />
+          <Property Name="ParaBirimiID" Type="int" />
+          <Property Name="DepartmanID" Type="int" />
+          <Property Name="TeslimAdresi" Type="nvarchar" MaxLength="200" />
+          <Property Name="TeslimFirma" Type="nvarchar" MaxLength="50" />
+          <Property Name="BantID" Type="int" />
+        </EntityType>
+        <EntityType Name="Terminal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="TusSayisi" Type="int" />
+        </EntityType>
+        <EntityType Name="Uretim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UretimTarihi" Type="date" />
+          <Property Name="Adet" Type="int" />
+        </EntityType>
+        <EntityType Name="UretimSafha">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Safhalar" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="SmartModelStoreContainer">
+          <EntitySet Name="BantTanim" EntityType="Self.BantTanim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Beden" EntityType="Self.Beden" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Calisan" EntityType="Self.Calisan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CalismaSureleri" EntityType="Self.CalismaSureleri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CalismaTarihi" EntityType="Self.CalismaTarihi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Departman" EntityType="Self.Departman" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Durum" EntityType="Self.Durum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gorev" EntityType="Self.Gorev" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grup" EntityType="Self.Grup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Islemler" EntityType="Self.Islemler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Makina" EntityType="Self.Makina" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ParaBirimi" EntityType="Self.ParaBirimi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ParaDonusum" EntityType="Self.ParaDonusum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Renk" EntityType="Self.Renk" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Siparis" EntityType="Self.Siparis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Terminal" EntityType="Self.Terminal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Uretim" EntityType="Self.Uretim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UretimSafha" EntityType="Self.UretimSafha" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SmartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BantTanim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BantAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BantKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Beden">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Calisan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ConcurrencyMode="None" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cinsiyet" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Askerlik" Type="Boolean" />
+          <Property Name="Mezuniyet" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TC" Type="Int64" />
+          <Property Name="Telefon" Type="Int64" />
+          <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AyrilmaNedeni" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="KanGrubu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmanID" Type="Int32" />
+          <Property Name="CalismaSuresiID" Type="Int32" />
+          <Property Name="GorevID" Type="Int32" />
+          <Property Name="UretimSafhaID" Type="Int32" />
+          <Property Name="SiparisID" Type="Int32" />
+          <Property Name="BantID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CalismaSureleri">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslangic" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Bitis" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CalismaTarihi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslangic" Type="DateTime" Precision="0" />
+          <Property Name="Bitis" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Departman">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KisiSayisi" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Durum">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Gorev">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Grup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Islemler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IslemAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IslemSuresi" Type="Time" Precision="7" />
+        </EntityType>
+        <EntityType Name="Makina">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SeriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Marka" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Cins" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="Boolean" />
+          <Property Name="Ozellik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Grup" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaxKapasite" Type="Int32" />
+          <Property Name="Standart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ParaBirimi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ParaDonusum">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Deger" Type="Double" />
+        </EntityType>
+        <EntityType Name="Renk">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Siparis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VerilisTarihi" Type="DateTime" Precision="0" />
+          <Property Name="TeslimTarihi" Type="DateTime" Precision="0" />
+          <Property Name="Adet" Type="Int32" />
+          <Property Name="BedenID" Type="Int32" />
+          <Property Name="ParaBirimiID" Type="Int32" />
+          <Property Name="DepartmanID" Type="Int32" />
+          <Property Name="TeslimAdresi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TeslimFirma" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BantID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Terminal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TusSayisi" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Uretim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UretimTarihi" Type="DateTime" Precision="0" />
+          <Property Name="Adet" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UretimSafha">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Safhalar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="SmartDataBase" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BantTanim" EntityType="Self.BantTanim" />
+          <EntitySet Name="Beden" EntityType="Self.Beden" />
+          <EntitySet Name="Calisan" EntityType="Self.Calisan" />
+          <EntitySet Name="CalismaSureleri" EntityType="Self.CalismaSureleri" />
+          <EntitySet Name="CalismaTarihi" EntityType="Self.CalismaTarihi" />
+          <EntitySet Name="Departman" EntityType="Self.Departman" />
+          <EntitySet Name="Durum" EntityType="Self.Durum" />
+          <EntitySet Name="Gorev" EntityType="Self.Gorev" />
+          <EntitySet Name="Grup" EntityType="Self.Grup" />
+          <EntitySet Name="Islemler" EntityType="Self.Islemler" />
+          <EntitySet Name="Makina" EntityType="Self.Makina" />
+          <EntitySet Name="Model" EntityType="Self.Model" />
+          <EntitySet Name="ParaBirimi" EntityType="Self.ParaBirimi" />
+          <EntitySet Name="ParaDonusum" EntityType="Self.ParaDonusum" />
+          <EntitySet Name="Renk" EntityType="Self.Renk" />
+          <EntitySet Name="Siparis" EntityType="Self.Siparis" />
+          <EntitySet Name="Terminal" EntityType="Self.Terminal" />
+          <EntitySet Name="Uretim" EntityType="Self.Uretim" />
+          <EntitySet Name="UretimSafha" EntityType="Self.UretimSafha" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SmartModelStoreContainer" CdmEntityContainer="SmartDataBase">
+          <EntitySetMapping Name="BantTanim">
+            <EntityTypeMapping TypeName="SmartModel.BantTanim">
+              <MappingFragment StoreEntitySet="BantTanim">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BantAdi" ColumnName="BantAdi" />
+                <ScalarProperty Name="BantKodu" ColumnName="BantKodu" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Beden">
+            <EntityTypeMapping TypeName="SmartModel.Beden">
+              <MappingFragment StoreEntitySet="Beden">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tur" ColumnName="Tur" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Calisan">
+            <EntityTypeMapping TypeName="SmartModel.Calisan">
+              <MappingFragment StoreEntitySet="Calisan">
+                <ScalarProperty Name="BantID" ColumnName="BantID" />
+                <ScalarProperty Name="SiparisID" ColumnName="SiparisID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+                <ScalarProperty Name="Askerlik" ColumnName="Askerlik" />
+                <ScalarProperty Name="Mezuniyet" ColumnName="Mezuniyet" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="AyrilmaNedeni" ColumnName="AyrilmaNedeni" />
+                <ScalarProperty Name="KanGrubu" ColumnName="KanGrubu" />
+                <ScalarProperty Name="DepartmanID" ColumnName="DepartmanID" />
+                <ScalarProperty Name="CalismaSuresiID" ColumnName="CalismaSuresiID" />
+                <ScalarProperty Name="GorevID" ColumnName="GorevID" />
+                <ScalarProperty Name="UretimSafhaID" ColumnName="UretimSafhaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CalismaSureleri">
+            <EntityTypeMapping TypeName="SmartModel.CalismaSureleri">
+              <MappingFragment StoreEntitySet="CalismaSureleri">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Baslangic" ColumnName="Baslangic" />
+                <ScalarProperty Name="Bitis" ColumnName="Bitis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CalismaTarihi">
+            <EntityTypeMapping TypeName="SmartModel.CalismaTarihi">
+              <MappingFragment StoreEntitySet="CalismaTarihi">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Baslangic" ColumnName="Baslangic" />
+                <ScalarProperty Name="Bitis" ColumnName="Bitis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departman">
+            <EntityTypeMapping TypeName="SmartModel.Departman">
+              <MappingFragment StoreEntitySet="Departman">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="KisiSayisi" ColumnName="KisiSayisi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Durum">
+            <EntityTypeMapping TypeName="SmartModel.Durum">
+              <MappingFragment StoreEntitySet="Durum">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gorev">
+            <EntityTypeMapping TypeName="SmartModel.Gorev">
+              <MappingFragment StoreEntitySet="Gorev">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grup">
+            <EntityTypeMapping TypeName="SmartModel.Grup">
+              <MappingFragment StoreEntitySet="Grup">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Islemler">
+            <EntityTypeMapping TypeName="SmartModel.Islemler">
+              <MappingFragment StoreEntitySet="Islemler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IslemAdi" ColumnName="IslemAdi" />
+                <ScalarProperty Name="IslemSuresi" ColumnName="IslemSuresi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Makina">
+            <EntityTypeMapping TypeName="SmartModel.Makina">
+              <MappingFragment StoreEntitySet="Makina">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Kod" ColumnName="Kod" />
+                <ScalarProperty Name="SeriNo" ColumnName="SeriNo" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="Cins" ColumnName="Cins" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="Ozellik" ColumnName="Ozellik" />
+                <ScalarProperty Name="Grup" ColumnName="Grup" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Model">
+            <EntityTypeMapping TypeName="SmartModel.Model">
+              <MappingFragment StoreEntitySet="Model">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="MaxKapasite" ColumnName="MaxKapasite" />
+                <ScalarProperty Name="Standart" ColumnName="Standart" />
+                <ScalarProperty Name="Kod" ColumnName="Kod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParaBirimi">
+            <EntityTypeMapping TypeName="SmartModel.ParaBirimi">
+              <MappingFragment StoreEntitySet="ParaBirimi">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParaDonusum">
+            <EntityTypeMapping TypeName="SmartModel.ParaDonusum">
+              <MappingFragment StoreEntitySet="ParaDonusum">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Deger" ColumnName="Deger" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Renk">
+            <EntityTypeMapping TypeName="SmartModel.Renk">
+              <MappingFragment StoreEntitySet="Renk">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Siparis">
+            <EntityTypeMapping TypeName="SmartModel.Siparis">
+              <MappingFragment StoreEntitySet="Siparis">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="VerilisTarihi" ColumnName="VerilisTarihi" />
+                <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
+                <ScalarProperty Name="Adet" ColumnName="Adet" />
+                <ScalarProperty Name="BedenID" ColumnName="BedenID" />
+                <ScalarProperty Name="ParaBirimiID" ColumnName="ParaBirimiID" />
+                <ScalarProperty Name="DepartmanID" ColumnName="DepartmanID" />
+                <ScalarProperty Name="TeslimAdresi" ColumnName="TeslimAdresi" />
+                <ScalarProperty Name="TeslimFirma" ColumnName="TeslimFirma" />
+                <ScalarProperty Name="BantID" ColumnName="BantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Terminal">
+            <EntityTypeMapping TypeName="SmartModel.Terminal">
+              <MappingFragment StoreEntitySet="Terminal">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="TusSayisi" ColumnName="TusSayisi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uretim">
+            <EntityTypeMapping TypeName="SmartModel.Uretim">
+              <MappingFragment StoreEntitySet="Uretim">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UretimTarihi" ColumnName="UretimTarihi" />
+                <ScalarProperty Name="Adet" ColumnName="Adet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UretimSafha">
+            <EntityTypeMapping TypeName="SmartModel.UretimSafha">
+              <MappingFragment StoreEntitySet="UretimSafha">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Safhalar" ColumnName="Safhalar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

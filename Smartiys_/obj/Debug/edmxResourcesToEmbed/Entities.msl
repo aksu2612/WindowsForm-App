@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SmartModelStoreContainer" CdmEntityContainer="SmartEntities1">
+    <EntitySetMapping Name="Beden">
+      <EntityTypeMapping TypeName="SmartModel.Beden">
+        <MappingFragment StoreEntitySet="Beden">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tur" ColumnName="tur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calisan">
+      <EntityTypeMapping TypeName="SmartModel.Calisan">
+        <MappingFragment StoreEntitySet="Calisan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="askerlikdurumu" ColumnName="askerlikdurumu" />
+          <ScalarProperty Name="mezuniyet" ColumnName="mezuniyet" />
+          <ScalarProperty Name="tc" ColumnName="tc" />
+          <ScalarProperty Name="numara" ColumnName="numara" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="ayrilmanedeni" ColumnName="ayrilmanedeni" />
+          <ScalarProperty Name="kangrubu" ColumnName="kangrubu" />
+          <ScalarProperty Name="Departman_ID" ColumnName="Departman_ID" />
+          <ScalarProperty Name="Calisma_Sure_ID" ColumnName="Calisma_Sure_ID" />
+          <ScalarProperty Name="Gorev_ID" ColumnName="Gorev_ID" />
+          <ScalarProperty Name="Uretim_Safha_ID" ColumnName="Uretim_Safha_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalismaSüreleri">
+      <EntityTypeMapping TypeName="SmartModel.CalismaSüreleri">
+        <MappingFragment StoreEntitySet="CalismaSüreleri">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslamasaati" ColumnName="baslamasaati" />
+          <ScalarProperty Name="bitissaati" ColumnName="bitissaati" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalismaTarihi">
+      <EntityTypeMapping TypeName="SmartModel.CalismaTarihi">
+        <MappingFragment StoreEntitySet="CalismaTarihi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslangictarihi" ColumnName="baslangictarihi" />
+          <ScalarProperty Name="bitistarihi" ColumnName="bitistarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departman">
+      <EntityTypeMapping TypeName="SmartModel.Departman">
+        <MappingFragment StoreEntitySet="Departman">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="kisisayisi" ColumnName="kisisayisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gorev">
+      <EntityTypeMapping TypeName="SmartModel.Gorev">
+        <MappingFragment StoreEntitySet="Gorev">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Makina">
+      <EntityTypeMapping TypeName="SmartModel.Makina">
+        <MappingFragment StoreEntitySet="Makina">
+          <ScalarProperty Name="Grubu" ColumnName="Grubu" />
+          <ScalarProperty Name="Ozellik" ColumnName="Ozellik" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Kodu" ColumnName="Kodu" />
+          <ScalarProperty Name="Seri_No" ColumnName="Seri_No" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="Marka" ColumnName="Marka" />
+          <ScalarProperty Name="Cinsi" ColumnName="Cinsi" />
+          <ScalarProperty Name="Durumu" ColumnName="Durumu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operasyon">
+      <EntityTypeMapping TypeName="SmartModel.Operasyon">
+        <MappingFragment StoreEntitySet="Operasyon">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="islemadi" ColumnName="islemadi" />
+          <ScalarProperty Name="islemsüresi" ColumnName="islemsüresi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParaBirimi">
+      <EntityTypeMapping TypeName="SmartModel.ParaBirimi">
+        <MappingFragment StoreEntitySet="ParaBirimi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParaDonusum">
+      <EntityTypeMapping TypeName="SmartModel.ParaDonusum">
+        <MappingFragment StoreEntitySet="ParaDonusum">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="deger" ColumnName="deger" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Renk">
+      <EntityTypeMapping TypeName="SmartModel.Renk">
+        <MappingFragment StoreEntitySet="Renk">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Siparis">
+      <EntityTypeMapping TypeName="SmartModel.Siparis">
+        <MappingFragment StoreEntitySet="Siparis">
+          <ScalarProperty Name="Teslim_Firma" ColumnName="Teslim_Firma" />
+          <ScalarProperty Name="Teslim_Adresi" ColumnName="Teslim_Adresi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="verilistarihi" ColumnName="verilistarihi" />
+          <ScalarProperty Name="teslimtarihi" ColumnName="teslimtarihi" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="BedenID" ColumnName="BedenID" />
+          <ScalarProperty Name="ParabirimiID" ColumnName="ParabirimiID" />
+          <ScalarProperty Name="DepartmanID" ColumnName="DepartmanID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Terminal">
+      <EntityTypeMapping TypeName="SmartModel.Terminal">
+        <MappingFragment StoreEntitySet="Terminal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="tussayisi" ColumnName="tussayisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uretim">
+      <EntityTypeMapping TypeName="SmartModel.Uretim">
+        <MappingFragment StoreEntitySet="Uretim">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uretimtarihi" ColumnName="uretimtarihi" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uretim_Safhalar">
+      <EntityTypeMapping TypeName="SmartModel.Uretim_Safhalar">
+        <MappingFragment StoreEntitySet="Uretim_Safhalar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Safhalar" ColumnName="Safhalar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bant_Tanim">
+      <EntityTypeMapping TypeName="SmartModel.Bant_Tanim">
+        <MappingFragment StoreEntitySet="Bant_Tanim">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Bant_Kodu" ColumnName="Bant_Kodu" />
+          <ScalarProperty Name="Bant_Adi" ColumnName="Bant_Adi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Model">
+      <EntityTypeMapping TypeName="SmartModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="Kodu" ColumnName="Kodu" />
+          <ScalarProperty Name="Standart" ColumnName="Standart" />
+          <ScalarProperty Name="maxkapasite" ColumnName="maxkapasite" />
+          <ScalarProperty Name="Tanimi" ColumnName="Tanimi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Durum">
+      <EntityTypeMapping TypeName="SmartModel.Durum">
+        <MappingFragment StoreEntitySet="Durum">
+          <ScalarProperty Name="D_Tanimi" ColumnName="D_Tanimi" />
+          <ScalarProperty Name="D_Adi" ColumnName="D_Adi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grup">
+      <EntityTypeMapping TypeName="SmartModel.Grup">
+        <MappingFragment StoreEntitySet="Grup">
+          <ScalarProperty Name="G_Adi" ColumnName="G_Adi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

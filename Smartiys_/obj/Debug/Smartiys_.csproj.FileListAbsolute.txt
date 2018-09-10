@@ -1,0 +1,45 @@
+c:\users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\bin\Debug\Smartiys_.exe.config
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\bin\Debug\Smartiys_.exe
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\bin\Debug\Smartiys_.pdb
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.csprojResolveAssemblyReference.cache
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Form1.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Properties.Resources.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.csproj.GenerateResource.Cache
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.exe
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.pdb
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\bin\Debug\EntityFramework.dll
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\bin\Debug\EntityFramework.xml
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Siparis_.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.ModelPage.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Band__Tanimlama.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Siparis_Bant_Atama.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Bant_Kopyala_Tasi.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Calisan_Hareketleri.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Makina_Tanimlama.resources
+C:\Users\ismail\documents\visual studio 2013\Projects\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Gorevler.resources
+D:\Smartiys_\Smartiys_\bin\Debug\Smartiys_.exe.config
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.exe
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.pdb
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.csprojResolveAssemblyReference.cache
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Band__Tanimlama.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Bant_Kopyala_Tasi.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Calisan_Hareketleri.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Form1.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Gorevler.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Makina_Tanimlama.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.ModelPage.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Properties.Resources.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Siparis_.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.Siparis_Bant_Atama.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.csproj.GenerateResource.Cache
+D:\Smartiys_\Smartiys_\bin\Debug\Smartiys_.exe
+D:\Smartiys_\Smartiys_\bin\Debug\Smartiys_.pdb
+D:\Smartiys_\Smartiys_\bin\Debug\EntityFramework.dll
+D:\Smartiys_\Smartiys_\bin\Debug\EntityFramework.xml
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.RenkView.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.BedenView.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.PersonelLiist.resources
+D:\Smartiys_\Smartiys_\obj\Debug\Smartiys_.MakinaList.resources
+C:\Users\ismail\Desktop\staj Proje\Yeni klasör\Smartiys_\Smartiys_\bin\Debug\Smartiys_.exe.config
+C:\Users\ismail\Desktop\staj Proje\Yeni klasör\Smartiys_\Smartiys_\obj\Debug\Smartiys_.exe
+C:\Users\ismail\Desktop\staj Proje\Yeni klasör\Smartiys_\Smartiys_\obj\Debug\Smartiys_.pdb

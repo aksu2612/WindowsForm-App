@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bant_Tanim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Bant_Adi" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Bant_Kodu" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Durum" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Beden">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tur" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Calisan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="soyadi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="cinsiyet" Type="bit" Nullable="false" />
+    <Property Name="askerlikdurumu" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="mezuniyet" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="tc" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="numara" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="adres" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ayrilmanedeni" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="kangrubu" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Departman_ID" Type="int" />
+    <Property Name="Calisma_Sure_ID" Type="int" />
+    <Property Name="Gorev_ID" Type="int" />
+    <Property Name="Uretim_Safha_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CalismaSüreleri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslamasaati" Type="time" Precision="7" Nullable="false" />
+    <Property Name="bitissaati" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CalismaTarihi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslangictarihi" Type="date" Nullable="false" />
+    <Property Name="bitistarihi" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departman">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="kisisayisi" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Durum">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="D_Adi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="D_Tanimi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gorev">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="G_Adi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Makina">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kodu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Seri_No" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Marka" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cinsi" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Durumu" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ozellik" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Grubu" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tanimi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="maxkapasite" Type="int" Nullable="false" />
+    <Property Name="Standart" Type="float" />
+    <Property Name="Kodu" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Operasyon">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="islemadi" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="islemsüresi" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParaBirimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParaDonusum">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="deger" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Renk">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Siparis">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="verilistarihi" Type="date" Nullable="false" />
+    <Property Name="teslimtarihi" Type="date" Nullable="false" />
+    <Property Name="adet" Type="int" Nullable="false" />
+    <Property Name="BedenID" Type="int" Nullable="false" />
+    <Property Name="ParabirimiID" Type="int" Nullable="false" />
+    <Property Name="DepartmanID" Type="int" Nullable="false" />
+    <Property Name="Teslim_Adresi" Type="nvarchar" MaxLength="200" />
+    <Property Name="Teslim_Firma" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Terminal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="tussayisi" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Uretim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="uretimtarihi" Type="date" Nullable="false" />
+    <Property Name="adet" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Uretim_Safhalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Safhalar" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SmartModelStoreContainer">
+    <EntitySet Name="Bant_Tanim" EntityType="Self.Bant_Tanim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Beden" EntityType="Self.Beden" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Calisan" EntityType="Self.Calisan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CalismaSüreleri" EntityType="Self.CalismaSüreleri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CalismaTarihi" EntityType="Self.CalismaTarihi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departman" EntityType="Self.Departman" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Durum" EntityType="Self.Durum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gorev" EntityType="Self.Gorev" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grup" EntityType="Self.Grup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Makina" EntityType="Self.Makina" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Operasyon" EntityType="Self.Operasyon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParaBirimi" EntityType="Self.ParaBirimi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParaDonusum" EntityType="Self.ParaDonusum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Renk" EntityType="Self.Renk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Siparis" EntityType="Self.Siparis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Terminal" EntityType="Self.Terminal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uretim" EntityType="Self.Uretim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uretim_Safhalar" EntityType="Self.Uretim_Safhalar" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
